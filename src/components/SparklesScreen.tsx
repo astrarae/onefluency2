@@ -1,7 +1,7 @@
 "use client";
 import { SparklesCore } from "./ui/Sparkles";
 
-export function SparklesPreview() {
+export function SparklesPreview({children}) {
     return (
         <div className="h-[40rem] w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-md">
             <h1 className="md:text-7xl text-3xl lg:text-9xl font-bold text-center text-white relative z-20">
@@ -26,6 +26,7 @@ export function SparklesPreview() {
 
                 {/* Radial Gradient to prevent sharp edges */}
                 <div className="absolute inset-0 w-full h-full bg-black [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]"></div>
+                {children}
             </div>
         </div>
     );
